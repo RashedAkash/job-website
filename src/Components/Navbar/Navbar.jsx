@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/logo.png'
+import useAuth from '../../Hooks/useAuth';
 const Navbar = () => {
+  const { name } = useAuth();
   return (
     <div>
       <div className="navbar bg-base-100">
@@ -29,7 +31,8 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <Link to='/login' className="btn">Login</Link>
+          <Link to='/login' className="btn">Login</Link>
+          
   </div>
 </div>
     </div>
