@@ -4,6 +4,9 @@ import Error from "../Pages/ErrorPage/Error";
 import Home from "../Pages/Home/Home";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
+import AddJob from "../Pages/AddJob/AddJob";
+import MyPostedJob from "../Pages/MyPostedJob/MyPostedJob";
+import MyBids from "../Pages/MyBids/MyBids";
 
 export const router = createBrowserRouter([
   {
@@ -22,6 +25,18 @@ export const router = createBrowserRouter([
       {
       path: '/signUP',
       element:<Register />
+    },
+      {
+      path: '/addJob',
+      element:<AddJob />
+    },
+      {
+      path: '/myJobs',
+      element:<MyPostedJob />
+    },
+      {
+      path: '/bids',
+      element:<MyBids />
     },
     ]
   }

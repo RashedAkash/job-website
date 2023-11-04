@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Home = () => {
+const MyPostedJob = () => {
   return (
     <div>
-      home
+      my job
     </div>
   );
 };
 
-export default Home;
+export default MyPostedJob;
