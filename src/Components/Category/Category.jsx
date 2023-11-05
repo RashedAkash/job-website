@@ -7,7 +7,7 @@ const Category = ({ items }) => {
     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
       {
         items.map(cat=> <div className="card card-compact  bg-base-100 shadow-xl">
-  <figure><img className='h-[200px] w-full' src={cat.img} alt="Shoes" /></figure>
+  <figure><img className='h-[200px] w-full' src={cat.img} alt="img" /></figure>
   <div className="card-body">
             <h2 className="card-title">{cat.jobTitle}</h2>
             <p className="card-title">Dead line : {cat.deadline}</p>

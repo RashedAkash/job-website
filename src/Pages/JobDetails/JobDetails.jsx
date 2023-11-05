@@ -15,6 +15,7 @@ const JobDetails = () => {
     const email = form.email.value;
     const price = form.price.value;
     const deadLine = form.deadLine.value;
+    
     console.log(fName,lName,email,price,deadLine);
   }
 

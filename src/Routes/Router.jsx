@@ -33,7 +33,8 @@ export const router = createBrowserRouter([
     },
       {
       path: '/myJobs',
-      element:<MyPostedJob />
+        element: <MyPostedJob />,
+      loader: ()=> fetch(`http://localhost:5000/jobs`)
     },
       {
       path: '/bids',
