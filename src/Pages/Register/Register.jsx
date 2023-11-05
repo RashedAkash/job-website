@@ -4,7 +4,7 @@ import useAuth from '../../Hooks/useAuth';
 import Swal from 'sweetalert2'
 
 const Register = () => {
-	const { googleSignIn,signUp } = useAuth();
+	const { googleSignIn,signUp,updateUser } = useAuth();
 
 	const handleGoogleSignUp = () => {
 		googleSignIn()
@@ -26,14 +26,17 @@ const Register = () => {
 		console.log(name, email, password, photo);
 		signUp(email, password)
 			.then(res => {
-				console.log(res.user);
-				Swal.fire({
+                updateUser(name, photo)
+                    .then(() => {
+                        	Swal.fire({
+  title: 'success!',
+  text: 'You sign up successfully',
   icon: 'success',
-  title: 'Congratulation',
-  text: 'You are sign up successfully!',
-  
-})
-			})
+  confirmButtonText: 'Congratulation'
+}) 
+
+                    })
+            })
 			.catch(err => {
 				console.log(err.message);
 				Swal.fire({
