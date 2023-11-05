@@ -1,4 +1,5 @@
 import React from 'react';
+import SectionTitle from '../SectionTitle/SectionTitle';
 
 const Price = () => {
   return (
@@ -7,7 +8,7 @@ const Price = () => {
 	<div className="container px-4 mx-auto">
 		<div className="max-w-2xl mx-auto mb-16 text-center">
 			<span className="font-bold tracki uppercase dark:text-blue-700">Pricing</span>
-			<h2 className="text-4xl font-bold lg:text-5xl text-[#777]">Choose a package</h2>
+			<SectionTitle title='Choose a package'></SectionTitle>
 		</div>
 		<div className="flex flex-wrap items-stretch -mx-4">
 			<div className="flex w-full mb-8 sm:px-4 md:w-1/2 lg:w-1/3 lg:mb-0">
@@ -37,7 +38,7 @@ const Price = () => {
 							<span>24/7 Support</span>
 						</li>
 					</ul>
-					<button type="button" className="inline-block px-5 py-3 font-semibold tracki text-center rounded dark:bg-violet-400 dark:text-gray-900">Get Started</button>
+					<button type="button" className="inline-block px-5 py-3 font-semibold tracki text-center rounded dark:bg-violet-400 dark:text-gray-900">Buy Now</button>
 				</div>
 			</div>
 			<div className="flex w-full mb-8 sm:px-4 md:w-1/2 lg:w-1/3 lg:mb-0">
@@ -75,7 +76,7 @@ const Price = () => {
 							<span>24/7 Support</span>
 						</li>
 					</ul>
-					<a rel="noopener noreferrer" href="#" className="inline-block w-full px-5 py-3 font-bold tracki text-center rounded dark:bg-gray-800 dark:text-violet-400">Get Started</a>
+					<a rel="noopener noreferrer" href="#" className="inline-block w-full px-5 py-3 font-bold tracki text-center rounded dark:bg-gray-800 dark:text-violet-400">Buy Now</a>
 				</div>
 			</div>
 			<div className="flex w-full mb-8 sm:px-4 md:w-1/2 lg:w-1/3 lg:mb-0">
@@ -119,7 +120,7 @@ const Price = () => {
 							<span>Vivamus ut lectus ex</span>
 						</li>
 					</ul>
-					<a rel="noopener noreferrer" href="#" className="inline-block w-full px-5 py-3 font-semibold tracki text-center rounded dark:bg-violet-400 dark:text-gray-900">Get Started</a>
+					<a rel="noopener noreferrer" href="#" className="inline-block w-full px-5 py-3 font-semibold tracki text-center rounded dark:bg-violet-400 dark:text-gray-900">Buy Now</a>
 				</div>
 			</div>
 		</div>

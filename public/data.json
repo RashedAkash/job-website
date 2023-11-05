@@ -5,7 +5,8 @@
     "priceRange": "$40 - $60 per hour",
     "shortDescription": "Develop a complete web application from scratch.",
     "bidNowButton": true,
-    "category": "Web Development"
+    "category": "Web Development",
+    "img": "https://i.postimg.cc/W4Sk3dmn/web1.jpg"
   },
   {
     "jobTitle": "UI/UX Designer",
@@ -13,7 +14,8 @@
     "priceRange": "$300 - $500 for the project",
     "shortDescription": "Design user-friendly interfaces for a mobile app.",
     "bidNowButton": true,
-    "category": "Web Development"
+    "category": "Web Development",
+    "img": "https://i.postimg.cc/Qd3mKW5G/web2.jpg"
   },
   {
     "jobTitle": "SEO Specialist",
@@ -21,7 +23,8 @@
     "priceRange": "$20 - $30 per hour",
     "shortDescription": "Optimize website content for search engines and improve rankings.",
     "bidNowButton": true,
-    "category": "Digital Marketing"
+    "category": "Digital Marketing",
+    "img": "https://i.postimg.cc/t4sqPYHk/dig2.jpg"
   },
   {
     "jobTitle": "Social Media Manager",
@@ -29,7 +32,8 @@
     "priceRange": "$250 - $400 per month",
     "shortDescription": "Manage and grow social media accounts for a small business.",
     "bidNowButton": true,
-    "category": "Digital Marketing"
+    "category": "Digital Marketing",
+    "img": "hhttps://i.postimg.cc/gcynkXY6/dig1.jpg"
   },
   {
     "jobTitle": "Logo Designer",
@@ -37,7 +41,8 @@
     "priceRange": "$100 - $200 for the project",
     "shortDescription": "Create a unique and memorable logo for a startup.",
     "bidNowButton": true,
-    "category": "Graphic Design"
+    "category": "Graphic Design",
+    "img": "https://i.postimg.cc/MH0x6QVZ/gr4.jpg"
   },
   {
     "jobTitle": "Illustrator",
@@ -45,7 +50,8 @@
     "priceRange": "$50 - $80 per illustration",
     "shortDescription": "Produce custom illustrations for a children's book.",
     "bidNowButton": true,
-    "category": "Graphic Design"
+    "category": "Graphic Design",
+    "img": "https://i.postimg.cc/Bvhj3ds7/gr3.jpg"
   },
   {
     "jobTitle": "Full Stack Developer",
@@ -53,7 +59,8 @@
     "priceRange": "$40 - $60 per hour",
     "shortDescription": "Develop a complete web application from scratch.",
     "bidNowButton": true,
-    "category": "Web Development"
+    "category": "Web Development",
+    "img": "https://i.postimg.cc/dtMmgT5k/web3.jpg"
   },
   {
     "jobTitle": "UI/UX Designer",
@@ -61,7 +68,8 @@
     "priceRange": "$300 - $500 for the project",
     "shortDescription": "Design user-friendly interfaces for a mobile app.",
     "bidNowButton": true,
-    "category": "Web Development"
+    "category": "Web Development",
+    "img": "https://i.postimg.cc/hGG9V8tw/web4.jpg"
   },
   {
     "jobTitle": "SEO Specialist",
@@ -69,7 +77,8 @@
     "priceRange": "$20 - $30 per hour",
     "shortDescription": "Optimize website content for search engines and improve rankings.",
     "bidNowButton": true,
-    "category": "Digital Marketing"
+    "category": "Digital Marketing",
+    "img": "https://i.postimg.cc/sx0FD41r/dig4jpg.jpg"
   },
   {
     "jobTitle": "Social Media Manager",
@@ -77,7 +86,8 @@
     "priceRange": "$250 - $400 per month",
     "shortDescription": "Manage and grow social media accounts for a small business.",
     "bidNowButton": true,
-    "category": "Digital Marketing"
+    "category": "Digital Marketing",
+    "img": "https://i.postimg.cc/8C8S644k/dig3.jpg"
   },
   {
     "jobTitle": "Logo Designer",
@@ -85,7 +95,8 @@
     "priceRange": "$100 - $200 for the project",
     "shortDescription": "Create a unique and memorable logo for a startup.",
     "bidNowButton": true,
-    "category": "Graphic Design"
+    "category": "Graphic Design",
+    "img": "https://i.postimg.cc/1zsTpjkH/gr2.jpg"
   },
   {
     "jobTitle": "Illustrator",
@@ -93,7 +104,8 @@
     "priceRange": "$50 - $80 per illustration",
     "shortDescription": "Produce custom illustrations for a children's book.",
     "bidNowButton": true,
-    "category": "Graphic Design"
+    "category": "Graphic Design",
+    "img": "https://i.postimg.cc/W4qDw50d/gr1.jpg"
   }
   
 ]
