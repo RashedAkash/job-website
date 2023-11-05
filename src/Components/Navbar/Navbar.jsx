@@ -1,9 +1,16 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+
+import { Link, NavLink } from 'react-router-dom';
 import logo from '../../assets/logo.png'
 import useAuth from '../../Hooks/useAuth';
 const Navbar = () => {
-  const { name } = useAuth();
+  const { user, logOut } = useAuth();
+  const handleLogout = () => {
+    logOut()
+      .then()
+      .catch(err => {
+      console.log(err);
+    })
+  }
   return (
     <div>
       <div className="navbar bg-base-100">
@@ -31,7 +38,31 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end">
-          <Link to='/login' className="btn">Login</Link>
+          
+             {
+                        user?.email ? <div className="dropdown dropdown-end ">
+                            <label tabIndex={0} className="btn bg-gray-400 btn-ghost btn-circle avatar">
+                                <div className="w-10 rounded-full">
+                                    {/* <img src={} alt="Akash" /> */}
+                                </div>
+                            </label>
+                            <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow  rounded-box bg-gray-400  w-52">
+                                <li>
+                                    <button className="btn text-black btn-sm  btn-ghost">Rashed</button>
+
+                                </li>
+                                <li>
+                                    <button className="btn btn-sm  btn-ghost"
+                                        onClick={handleLogout}
+                                    >Logout</button>
+
+                                </li>
+                            </ul>
+                        </div>
+                            :
+                            <Link to='/login' className="btn">Login</Link>
+                    }
+         
           
   </div>
 </div>
