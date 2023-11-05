@@ -1,0 +1,99 @@
+[
+  {
+    "jobTitle": "Full Stack Developer",
+    "deadline": "2023-12-10",
+    "priceRange": "$40 - $60 per hour",
+    "shortDescription": "Develop a complete web application from scratch.",
+    "bidNowButton": true,
+    "category": "Web Development"
+  },
+  {
+    "jobTitle": "UI/UX Designer",
+    "deadline": "2023-11-25",
+    "priceRange": "$300 - $500 for the project",
+    "shortDescription": "Design user-friendly interfaces for a mobile app.",
+    "bidNowButton": true,
+    "category": "Web Development"
+  },
+  {
+    "jobTitle": "SEO Specialist",
+    "deadline": "2023-12-05",
+    "priceRange": "$20 - $30 per hour",
+    "shortDescription": "Optimize website content for search engines and improve rankings.",
+    "bidNowButton": true,
+    "category": "Digital Marketing"
+  },
+  {
+    "jobTitle": "Social Media Manager",
+    "deadline": "2023-11-20",
+    "priceRange": "$250 - $400 per month",
+    "shortDescription": "Manage and grow social media accounts for a small business.",
+    "bidNowButton": true,
+    "category": "Digital Marketing"
+  },
+  {
+    "jobTitle": "Logo Designer",
+    "deadline": "2023-12-15",
+    "priceRange": "$100 - $200 for the project",
+    "shortDescription": "Create a unique and memorable logo for a startup.",
+    "bidNowButton": true,
+    "category": "Graphic Design"
+  },
+  {
+    "jobTitle": "Illustrator",
+    "deadline": "2023-11-30",
+    "priceRange": "$50 - $80 per illustration",
+    "shortDescription": "Produce custom illustrations for a children's book.",
+    "bidNowButton": true,
+    "category": "Graphic Design"
+  },
+  {
+    "jobTitle": "Full Stack Developer",
+    "deadline": "2023-12-10",
+    "priceRange": "$40 - $60 per hour",
+    "shortDescription": "Develop a complete web application from scratch.",
+    "bidNowButton": true,
+    "category": "Web Development"
+  },
+  {
+    "jobTitle": "UI/UX Designer",
+    "deadline": "2023-11-25",
+    "priceRange": "$300 - $500 for the project",
+    "shortDescription": "Design user-friendly interfaces for a mobile app.",
+    "bidNowButton": true,
+    "category": "Web Development"
+  },
+  {
+    "jobTitle": "SEO Specialist",
+    "deadline": "2023-12-05",
+    "priceRange": "$20 - $30 per hour",
+    "shortDescription": "Optimize website content for search engines and improve rankings.",
+    "bidNowButton": true,
+    "category": "Digital Marketing"
+  },
+  {
+    "jobTitle": "Social Media Manager",
+    "deadline": "2023-11-20",
+    "priceRange": "$250 - $400 per month",
+    "shortDescription": "Manage and grow social media accounts for a small business.",
+    "bidNowButton": true,
+    "category": "Digital Marketing"
+  },
+  {
+    "jobTitle": "Logo Designer",
+    "deadline": "2023-12-15",
+    "priceRange": "$100 - $200 for the project",
+    "shortDescription": "Create a unique and memorable logo for a startup.",
+    "bidNowButton": true,
+    "category": "Graphic Design"
+  },
+  {
+    "jobTitle": "Illustrator",
+    "deadline": "2023-11-30",
+    "priceRange": "$50 - $80 per illustration",
+    "shortDescription": "Produce custom illustrations for a children's book.",
+    "bidNowButton": true,
+    "category": "Graphic Design"
+  }
+  
+]
