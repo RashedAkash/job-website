@@ -1,18 +1,57 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import useAuth from '../../Hooks/useAuth';
+import Swal from 'sweetalert2'
 
 const Login = () => {
+const { logIn } = useAuth();
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		const form = e.target;
+		const name = form.username.value;
+		const email = form.email.value;
+		const password = form.password.value;
+		
+
+		console.log(name, email, password);
+		logIn(email, password)
+			.then(res => {
+				console.log(res.user);
+				Swal.fire({
+  icon: 'success',
+  title: 'Congratulation',
+  text: 'You are login successfully!',
+  
+})
+			})
+			.catch(err => {
+				console.log(err.message);
+				Swal.fire({
+  icon: 'error',
+  title: 'Oops...',
+  text: 'Something went wrong!',
+  footer: '<a href="">Why do I have this issue?</a>'
+})
+		})
+
+
+
+	}
   return (
     <div className=' flex justify-center py-10'>
       <div className="w-full max-w-md p-8 space-y-3 rounded-xl dark:bg-blue-700 dark:text-gray-100">
 	<h1 className="text-2xl font-bold text-center">Login</h1>
-	<form novalidate="" action="" className="space-y-6">
+	<form  onSubmit={handleSubmit} className="space-y-6">
 		<div className="space-y-1 text-sm">
-			<label for="username" className="block dark:text-gray-400">Username</label>
+			<label  className="block dark:text-gray-400">Username</label>
 			<input type="text" name="username" id="username" placeholder="Username" className="w-full px-4 py-3 rounded-md dark:border-gray-700 border dark:bg-gray-900 dark:text-gray-100 focus:dark:border-violet-400" />
+					</div>
+					<div className="space-y-1 text-sm">
+			<label  className="block dark:text-gray-400">Email</label>
+			<input type="email" name="email" id="emil" placeholder="Username" className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 border focus:dark:border-violet-400" />
 		</div>
 		<div className="space-y-1 text-sm">
-			<label for="password" className="block dark:text-gray-400">Password</label>
+			<label  className="block dark:text-gray-400">Password</label>
 			<input type="password" name="password" id="password" placeholder="Password" className="w-full border px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 focus:dark:border-violet-400" />
 			<div className="flex justify-end text-xs dark:text-gray-400">
 				<a rel="noopener noreferrer" href="#">Forgot Password?</a>
