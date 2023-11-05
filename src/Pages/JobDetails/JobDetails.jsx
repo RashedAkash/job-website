@@ -1,11 +1,22 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import SectionTitle from '../../Components/SectionTitle/SectionTitle';
 
 const JobDetails = () => {
   const data = useLoaderData();
   console.log(Object.keys(data).join(','));
   const { _id, jobTitle, deadline, priceRange, shortDescription, bidNowButton, category, img } = data;
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const fName = form.firstName.value;
+    const lName = form.lastName.value;
+    const email = form.email.value;
+    const price = form.price.value;
+    const deadLine = form.deadLine.value;
+    console.log(fName,lName,email,price,deadLine);
+  }
 
   return (
     <div>
@@ -27,7 +38,7 @@ const JobDetails = () => {
       <SectionTitle title='Place your bid' />
       <section className="p-6 dark:bg-gray-200 dark:text-gray-50">
         
-	<form  action="" className="container flex flex-col mx-auto space-y-12">
+	<form  onSubmit={handleSubmit} className="container flex flex-col mx-auto space-y-12">
 		<fieldset className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm dark:bg-blue-900">
 			<div className="space-y-2 col-span-full lg:col-span-1">
 				<p className="font-medium">Personal Inormation</p>
@@ -36,11 +47,11 @@ const JobDetails = () => {
 			<div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-3">
 				<div className="col-span-full sm:col-span-3">
 					<label  className="text-sm">First name</label>
-					<input id="firstname" name="firstname" type="text" placeholder="First name" className="w-full rounded-md p-3 focus:ring focus:ri focus:ri dark:border-gray-700 dark:text-gray-900" />
+					<input id="firstName" name="firstName" type="text" placeholder="First name" className="w-full rounded-md p-3 focus:ring focus:ri focus:ri dark:border-gray-700 dark:text-gray-900" />
 				</div>
 				<div className="col-span-full sm:col-span-3">
 					<label  className="text-sm">Last name</label>
-					<input id="lastname" name="lastname" type="text" placeholder="Last name" className="w-full rounded-md p-3  focus:ring focus:ri focus:ri dark:border-gray-700 dark:text-gray-900" />
+					<input id="lastName" name="lastName" type="text" placeholder="Last name" className="w-full rounded-md p-3  focus:ring focus:ri focus:ri dark:border-gray-700 dark:text-gray-900" />
 				</div>
 				<div className="col-span-full sm:col-span-3">
 					<label className="text-sm">Email</label>
@@ -53,13 +64,15 @@ const JobDetails = () => {
 				</div>
 				<div className="col-span-full sm:col-span-2">
 					<label  className="text-sm">Dead / Line</label>
-					<input id="deadLine" name="deadLine" type="text" placeholder="" className="w-full p-3 rounded-md focus:ring focus:ri focus:ri dark:border-gray-700 dark:text-gray-900" />
+					<input id="deadLine" name="deadLine" type="date" placeholder="" className="w-full p-3 rounded-md focus:ring focus:ri focus:ri dark:border-gray-700 dark:text-gray-900" />
 				</div>
 				
             </div>
             
 		</fieldset>
-		<div className=' flex justify-center'><button className="btn btn-wide bg-blue-900 text-white">Bid this Job</button></div>
+         
+            <div className=' flex justify-center'><button className="btn btn-wide bg-blue-900 text-white">Bid on the project</button></div>
+          
 	</form>
 </section>
     </div>
