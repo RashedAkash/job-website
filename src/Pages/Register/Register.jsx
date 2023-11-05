@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
+import Swal from 'sweetalert2'
 
 const Register = () => {
 	const { googleSignIn,signUp } = useAuth();
@@ -25,10 +26,22 @@ const Register = () => {
 		console.log(name, email, password, photo);
 		signUp(email, password)
 			.then(res => {
-			console.log(res.user);
+				console.log(res.user);
+				Swal.fire({
+  icon: 'success',
+  title: 'Congratulation',
+  text: 'You are sign up successfully!',
+  
+})
 			})
 			.catch(err => {
-			console.log(err.message);
+				console.log(err.message);
+				Swal.fire({
+  icon: 'error',
+  title: 'Oops...',
+  text: 'Something went wrong!',
+  footer: '<a href="">Why do I have this issue?</a>'
+})
 		})
 
 
