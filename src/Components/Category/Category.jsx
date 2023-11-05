@@ -17,7 +17,7 @@ const Category = ({ items }) => {
             
             
     <div className="card-actions justify-center">
-              <Link to={`/job`}>
+              <Link to={`/jobs/${cat._id}`}>
               <button className="btn bg-blue-700 text-white">Bid Now</button></Link>
     </div>
   </div>
