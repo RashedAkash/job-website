@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import SectionTitle from '../../Components/SectionTitle/SectionTitle';
 
 const JobDetails = () => {
   const data = useLoaderData();
@@ -12,7 +13,7 @@ const JobDetails = () => {
 	<div className="container mx-auto space-y-12">
 		<div className="flex flex-col overflow-hidden rounded-md shadow-sm lg:flex-row">
 			<img src={img} alt="" className="h-80  aspect-video" />
-			<div className="flex flex-col justify-center flex-1 p-6 dark:dark:bg-blue-700">
+			<div className="flex flex-col justify-center flex-1 p-6 dark:dark:bg-blue-900">
 				<span className="text-xs uppercase dark:text-gray-400"></span>
               <h3 className="text-3xl font-bold">{ jobTitle}</h3>
               <p className="my-6 dark:text-gray-400">{shortDescription }</p>
@@ -22,6 +23,44 @@ const JobDetails = () => {
 		</div>
 	
 	</div>
+      </section>
+      <SectionTitle title='Place your bid' />
+      <section className="p-6 dark:bg-gray-200 dark:text-gray-50">
+        
+	<form  action="" className="container flex flex-col mx-auto space-y-12">
+		<fieldset className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm dark:bg-blue-900">
+			<div className="space-y-2 col-span-full lg:col-span-1">
+				<p className="font-medium">Personal Inormation</p>
+				<p className="text-xs">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci fuga autem eum!</p>
+			</div>
+			<div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-3">
+				<div className="col-span-full sm:col-span-3">
+					<label  className="text-sm">First name</label>
+					<input id="firstname" name="firstname" type="text" placeholder="First name" className="w-full rounded-md p-3 focus:ring focus:ri focus:ri dark:border-gray-700 dark:text-gray-900" />
+				</div>
+				<div className="col-span-full sm:col-span-3">
+					<label  className="text-sm">Last name</label>
+					<input id="lastname" name="lastname" type="text" placeholder="Last name" className="w-full rounded-md p-3  focus:ring focus:ri focus:ri dark:border-gray-700 dark:text-gray-900" />
+				</div>
+				<div className="col-span-full sm:col-span-3">
+					<label className="text-sm">Email</label>
+					<input id="email" name="email" type="email" placeholder="Email" className="w-full rounded-md p-3 focus:ring focus:ri focus:ri dark:border-gray-700 dark:text-gray-900" />
+				</div>
+				
+				<div className="col-span-full sm:col-span-2">
+					<label  className="text-sm">Price</label>
+					<input id="price" name="price" type="text" placeholder="" className="w-full p-3 rounded-md focus:ring focus:ri focus:ri dark:border-gray-700 dark:text-gray-900" />
+				</div>
+				<div className="col-span-full sm:col-span-2">
+					<label  className="text-sm">Dead / Line</label>
+					<input id="deadLine" name="deadLine" type="text" placeholder="" className="w-full p-3 rounded-md focus:ring focus:ri focus:ri dark:border-gray-700 dark:text-gray-900" />
+				</div>
+				
+            </div>
+            
+		</fieldset>
+		<div className=' flex justify-center'><button className="btn btn-wide bg-blue-900 text-white">Bid this Job</button></div>
+	</form>
 </section>
     </div>
   );

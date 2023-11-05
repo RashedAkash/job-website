@@ -10,7 +10,7 @@ const Brand = () => {
   return (
     <div>
        <Marquee>
-        <div className="bg-blue-700 py-4 gap-2 flex">
+        <div className="bg-blue-900 py-4 gap-2 flex">
           <img src={brand1} alt="" />
     <img src={brand2} alt="" />
     <img src={brand3} alt="" />

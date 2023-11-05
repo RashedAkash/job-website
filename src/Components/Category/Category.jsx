@@ -18,7 +18,7 @@ const Category = ({ items }) => {
             
     <div className="card-actions justify-center">
               <Link to={`/jobs/${cat._id}`}>
-              <button className="btn bg-blue-700 text-white">Bid Now</button></Link>
+              <button className="btn bg-blue-900 text-white">Bid Now</button></Link>
     </div>
   </div>
 </div>)
