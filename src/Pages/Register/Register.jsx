@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
 
 const Register = () => {
-	const { googleSignIn } = useAuth();
+	const { googleSignIn,signUp } = useAuth();
 
 	const handleGoogleSignUp = () => {
 		googleSignIn()
@@ -23,7 +23,13 @@ const Register = () => {
 		const photo = form.photo.value;
 
 		console.log(name, email, password, photo);
-		
+		signUp(email, password)
+			.then(res => {
+			console.log(res.user);
+			})
+			.catch(err => {
+			console.log(err.message);
+		})
 
 
 
