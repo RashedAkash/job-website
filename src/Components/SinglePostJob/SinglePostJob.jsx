@@ -47,7 +47,7 @@ const SinglePostJob = ({ job,allData,setData }) => {
   return (
     <div>
       <div className="card card-compact h-[500px]  bg-base-100 shadow-xl">
-  <img src={job.img} className='h-[200px]' alt="" />
+  <img src={job.img} className='h-[150px] w-full md:h-[200px]' alt="" />
   <div className="card-body">
           <h2 className="card-title">{job.jobTitle }</h2>
           <p><span className='font-bold'>Category : </span>{ job.category}</p>
@@ -56,8 +56,10 @@ const SinglePostJob = ({ job,allData,setData }) => {
           <p><span className='font-bold'>priceRange : </span>{ job.priceRange}</p>
           
     <div className="card-actions justify-end">
-      <Link to={`/jobUpdate/${job._id}`}><button className="btn btn-primary bg-blue-900">Update</button></Link>
+            <div className='flex gap-1'>
+               <Link to={`/jobUpdate/${job._id}`}><button className="btn btn-primary bg-blue-900">Update</button></Link>
       <button onClick={()=>handleDelete(job._id)} className="btn btn-warning">Delete</button>
+     </div>
     </div>
   </div>
 </div>
