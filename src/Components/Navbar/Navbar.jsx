@@ -9,6 +9,7 @@ const Navbar = () => {
    const handleLogout = () => {
     logOut()
       .then(() => {
+        
         	Swal.fire({
   icon: 'success',
   title: 'Congratulation',

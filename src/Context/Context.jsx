@@ -29,17 +29,12 @@ const provider = new GoogleAuthProvider();
     setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
-//manage user
-  useEffect(() => {
-    const subscribe = onAuthStateChanged(auth, (user) => {
-      if (user) {
-        setUser(user);
-        setLoading(false);
 
-        return () => {
-          return subscribe()
-        }
-      }
+   //manage user
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      setUser(user);
+      setLoading(false)
     });
   }, []);
 
