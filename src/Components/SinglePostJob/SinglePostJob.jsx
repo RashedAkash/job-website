@@ -1,9 +1,9 @@
 import axios from 'axios'
 import Swal from 'sweetalert2';
 
-const SinglePostJob = ({ job }) => {
+const SinglePostJob = ({ job,allData,setData }) => {
   const handleDelete = (id) => {
-    console.log(id);
+    
     Swal.fire({
   title: 'Are you sure?',
   text: "You won't be able to revert this!",
@@ -18,16 +18,20 @@ const SinglePostJob = ({ job }) => {
     axios.delete(`http://localhost:5000/jobs/${id}`)
     .then(function (response) {
     console.log(response.data);
-    if (response.data.acknowledged) {
+    if (response.data.deletedCount > 0) {
        Swal.fire(
       'Deleted!',
       'Your file has been deleted.',
       'success'
-    )
+      )
+      
+      const remaining = allData.filter(item => item._id !== id)
+      setData(remaining);
+      
       }
-      if (response.data.deletedCount > 0) {
-        
-      }
+
+                        
+      
 
 
   })
