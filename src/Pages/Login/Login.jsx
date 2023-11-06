@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
 import Swal from 'sweetalert2'
+import { Helmet } from 'react-helmet-async';
 
 const Login = () => {
 const { logIn } = useAuth();
@@ -37,8 +38,13 @@ const { logIn } = useAuth();
 
 
 	}
-  return (
-    <div className=' flex justify-center py-10'>
+	return (
+		
+		<div>
+			 <Helmet>
+        <title>Log in | job website</title>
+      </Helmet>
+			 <div className=' flex justify-center py-10'>
       <div className="w-full max-w-md p-8 space-y-3 rounded-xl dark:bg-blue-900 dark:text-gray-100">
 	<h1 className="text-2xl font-bold text-center">Login</h1>
 	<form  onSubmit={handleSubmit} className="space-y-6">
@@ -86,6 +92,7 @@ const { logIn } = useAuth();
 	</p>
 </div>
     </div>
+	 </div>
   );
 };
 
