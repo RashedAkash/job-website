@@ -1,7 +1,44 @@
-import React from 'react';
+import axios from 'axios'
+import Swal from 'sweetalert2';
 
 const SinglePostJob = ({ job }) => {
-  console.log(job);
+  const handleDelete = (id) => {
+    console.log(id);
+    Swal.fire({
+  title: 'Are you sure?',
+  text: "You won't be able to revert this!",
+  icon: 'warning',
+  showCancelButton: true,
+  confirmButtonColor: '#3085d6',
+  cancelButtonColor: '#d33',
+  confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+  
+  if (result.isConfirmed) {
+    axios.delete(`http://localhost:5000/jobs/${id}`)
+    .then(function (response) {
+    console.log(response.data);
+    if (response.data.acknowledged) {
+       Swal.fire(
+      'Deleted!',
+      'Your file has been deleted.',
+      'success'
+    )
+      }
+      if (response.data.deletedCount > 0) {
+        
+      }
+
+
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+
+  
+  }
+})
+  }
   return (
     <div>
       <div className="card card-compact h-[500px]  bg-base-100 shadow-xl">
@@ -15,7 +52,7 @@ const SinglePostJob = ({ job }) => {
           
     <div className="card-actions justify-end">
       <button className="btn btn-primary bg-blue-900">Update</button>
-      <button className="btn btn-warning">Delete</button>
+      <button onClick={()=>handleDelete(job._id)} className="btn btn-warning">Delete</button>
     </div>
   </div>
 </div>
