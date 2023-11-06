@@ -1,10 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
 import Swal from 'sweetalert2'
 import { Helmet } from 'react-helmet-async';
 
 const Login = () => {
+	const navigate = useNavigate();
+	const location = useLocation();
 const { logIn } = useAuth();
 	const handleSubmit = (e) => {
 		e.preventDefault();
@@ -23,7 +25,8 @@ const { logIn } = useAuth();
   title: 'Congratulation',
   text: 'You are login successfully!',
   
-})
+				})
+				navigate(location?.state? location?.state:'/')     
 			})
 			.catch(err => {
 				console.log(err.message);

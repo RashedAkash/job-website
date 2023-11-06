@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import SinglePostJob from '../../Components/SinglePostJob/SinglePostJob';
+import { Helmet } from 'react-helmet-async';
 
 const MyPostedJob = () => {
   
@@ -8,6 +9,10 @@ const MyPostedJob = () => {
   const [allData, setData] = useState(data);
 
   return (
+    <div>
+       <Helmet>
+        <title>my posted job | job website</title>
+      </Helmet>
     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
       {
         allData.map(job => <SinglePostJob
@@ -17,6 +22,7 @@ const MyPostedJob = () => {
           setData={setData} />)
     }
     </div>
+   </div>
   );
 };
 

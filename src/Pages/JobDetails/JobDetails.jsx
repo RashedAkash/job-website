@@ -3,6 +3,7 @@ import { Link, useLoaderData, useNavigate } from 'react-router-dom';
 import SectionTitle from '../../Components/SectionTitle/SectionTitle';
 import axios from 'axios';
 import Swal from 'sweetalert2';
+import { Helmet } from 'react-helmet-async';
 
 const JobDetails = () => {
 	const navigate = useNavigate();
@@ -42,7 +43,10 @@ const JobDetails = () => {
   }
 
   return (
-    <div>
+		<div>
+			<Helmet>
+        <title>Job details | job website</title>
+      </Helmet>
      <section className="p-4 lg:p-8 dark:bg-gray-200 dark:text-gray-100">
 	<div className="container mx-auto space-y-12">
 		<div className="flex flex-col overflow-hidden rounded-md shadow-sm lg:flex-row">

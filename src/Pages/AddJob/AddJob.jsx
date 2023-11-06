@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { Helmet } from 'react-helmet-async';
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2'
 
@@ -41,6 +42,9 @@ const AddJob = () => {
   }
   return (
     <div>
+      <Helmet>
+        <title>Add job | job website</title>
+      </Helmet>
       <section className="p-6 dark:bg-gray-200 dark:text-gray-50">
         
 	<form onSubmit={handleSubmit}  className="container flex flex-col mx-auto space-y-12">

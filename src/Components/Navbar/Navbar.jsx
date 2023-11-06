@@ -1,15 +1,25 @@
 
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import logo from '../../assets/logo.png'
 import useAuth from '../../Hooks/useAuth';
+import Swal from 'sweetalert2';
 const Navbar = () => {
+  const navigate = useNavigate();
   const { user, logOut } = useAuth();
-  const handleLogout = () => {
+   const handleLogout = () => {
     logOut()
-      .then()
-      .catch(err => {
-      console.log(err);
-    })
+      .then(() => {
+        	Swal.fire({
+  icon: 'success',
+  title: 'Congratulation',
+  text: 'You are log out successfully!',
+  
+          })
+        navigate('/login')
+      })
+      .catch((error => {
+      console.error(error);
+    }))
   }
   return (
     <div>
@@ -40,7 +50,7 @@ const Navbar = () => {
   <div className="navbar-end">
           
              {
-                        user?.email ? <div className="dropdown dropdown-end ">
+                        user ? <div className="dropdown dropdown-end ">
                             <label tabIndex={0} className="btn bg-gray-400 btn-ghost btn-circle avatar">
                                 <div className="w-10 rounded-full">
                                     <img src={user.photoURL
@@ -60,8 +70,10 @@ const Navbar = () => {
                                 </li>
                             </ul>
                         </div>
-                            :
-                            <Link to='/login' className="btn">Login</Link>
+              : <div>
+                <Link to='/login' className="btn">Login</Link>
+                            </div>
+                            
                     }
          
           

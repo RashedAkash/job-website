@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
 import Swal from 'sweetalert2'
+import { Helmet } from 'react-helmet-async';
 
 const Register = () => {
 	const { googleSignIn,signUp,updateUser } = useAuth();
@@ -50,7 +51,12 @@ const Register = () => {
 
 
 	}
-  return (
+	return (
+		
+		<div>
+			<Helmet>
+        <title>Sign up | job website</title>
+      </Helmet>
     <div className=' flex justify-center py-10'>
       <div className="w-full max-w-md p-8 space-y-3 rounded-xl dark:dark:bg-blue-900 dark:text-gray-100">
 	<h1 className="text-2xl font-bold text-center">SignUp</h1>
@@ -106,6 +112,7 @@ const Register = () => {
 	</p>
 </div>
     </div>
+		</div>
   );
 };
 

@@ -1,7 +1,10 @@
-import useAuth from "../Hooks/useAuth";
 
+import { Navigate, useLocation } from 'react-router-dom';
+import useAuth from '../Hooks/useAuth';
 
-const PrivateRoutes = ({children}) => {
+const PrivateRoutes = ({ children }) => {
+  const location = useLocation();
+  
   const { user, loading } = useAuth();
   if (loading) {
     return <div>
@@ -15,11 +18,9 @@ const PrivateRoutes = ({children}) => {
 <span className="loading loading-spinner text-error"></span>
     </div>
   }
-
   if (user) {
-    return children;
-    
+    return children
   }
-};
-
+  return <Navigate state={location.pathname} to='/login' />
+}
 export default PrivateRoutes;

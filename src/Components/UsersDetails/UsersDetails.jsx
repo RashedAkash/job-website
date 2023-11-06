@@ -1,8 +1,8 @@
 import React from 'react';
 import BidComponent from '../BidComponet/BidComponet';
 
-const UsersDetails = ({ user }) => {
-  console.log(user);
+const UsersDetails = ({ person }) => {
+  console.log(person);
   return (
     <div>
       <div className="overflow-x-auto">
@@ -22,10 +22,10 @@ const UsersDetails = ({ user }) => {
       {/* row 1 */}
       <tr className="bg-base-200">
              
-              <td>{user.fName }</td>
-              <td>{user.jobTitle }</td>
-              <td>{user.price}</td>
-              <td>{user.deadLine}</td>
+              <td>{person.fName }</td>
+              <td>{person.jobTitle }</td>
+              <td>{person.price}</td>
+              <td>{person.deadLine}</td>
               <button >
                 <BidComponent />
               </button>
