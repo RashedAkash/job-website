@@ -25,7 +25,13 @@ const JobUpdate = () => {
     })
     .then(function (response) {
     // handle success
-    console.log(response);
+      console.log(response);
+       Swal.fire({
+                        title: 'Success!',
+                        text: 'Coffee Updated Successfully',
+                        icon: 'success',
+                        confirmButtonText: 'Cool'
+                    })
   })
   .catch(function (error) {
     // handle error
