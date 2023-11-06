@@ -1,8 +1,11 @@
 import React from 'react';
-import { Link, useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData, useNavigate } from 'react-router-dom';
 import SectionTitle from '../../Components/SectionTitle/SectionTitle';
+import axios from 'axios';
+import Swal from 'sweetalert2';
 
 const JobDetails = () => {
+	const navigate = useNavigate();
   const data = useLoaderData();
   console.log(Object.keys(data).join(','));
   const { _id, jobTitle, deadline, priceRange, shortDescription, bidNowButton, category, img } = data;
@@ -16,7 +19,26 @@ const JobDetails = () => {
     const price = form.price.value;
     const deadLine = form.deadLine.value;
     
-    console.log(fName,lName,email,price,deadLine);
+		console.log(fName, lName, email, price, deadLine);
+		axios.post(`http://localhost:5000/users`, {
+			fName, lName, email, price, deadLine
+		})
+		.then(function (response) {
+    console.log(response.data);
+    if (response.data.acknowledged) {
+      Swal.fire({
+  icon: 'success',
+  title: 'Congratulation',
+  text: 'You add successfully!',
+  
+})
+    }
+ navigate('/bids')
+
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
   }
 
   return (
