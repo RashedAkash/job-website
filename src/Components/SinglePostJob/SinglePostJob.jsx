@@ -1,4 +1,5 @@
 import axios from 'axios'
+import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 const SinglePostJob = ({ job,allData,setData }) => {
@@ -27,7 +28,7 @@ const SinglePostJob = ({ job,allData,setData }) => {
       
       const remaining = allData.filter(item => item._id !== id)
       setData(remaining);
-      
+
       }
 
                         
@@ -55,7 +56,7 @@ const SinglePostJob = ({ job,allData,setData }) => {
           <p><span className='font-bold'>priceRange : </span>{ job.priceRange}</p>
           
     <div className="card-actions justify-end">
-      <button className="btn btn-primary bg-blue-900">Update</button>
+      <Link to={`/jobUpdate/${job._id}`}><button className="btn btn-primary bg-blue-900">Update</button></Link>
       <button onClick={()=>handleDelete(job._id)} className="btn btn-warning">Delete</button>
     </div>
   </div>
